@@ -1,7 +1,7 @@
 <?php 
     function conectar_bd($clave,$basedatos)
     {
-        $conexion = new mysqli('localhost', 'ADMIN', $clave, $basedatos);
+        $conexion = new mysqli('localhost', 'ADMIN', 'root', 'sena_Bd');
 
         if ($conexion->connect_error)
         {

@@ -31,7 +31,7 @@
                                 <select class="form-control" name="tipoid">
                                     <option value="C.C" selected> CC </option>
                                     <option value="T.I"> T.I</option>
-                                    <option value="R.C"><R.C/option>
+                                    <option value="R.C">R.C</option>
                                     <option value="PEP">PEP</option>
                                 </select>
                                 </div>

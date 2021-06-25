@@ -6,7 +6,7 @@ include('funciones.php');
 
 
     $miconexion=conectar_bd('root', 'sena_bd');
-    $resultado=consulta($miconexion, "insert into fichas (Progra_Nombre, Progra_tipo) values ('{$vnombre}', '{$vtipo}') ");
+    $resultado=consulta($miconexion, "insert into programa (Progra_Nombre, Progra_tipo) values ('{$vnombre}', '{$vtipo}') ");
     if ($resultado)
         {
             echo "Guardado exitoso";

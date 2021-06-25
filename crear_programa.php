@@ -28,8 +28,18 @@
                                 <input class="form-control" style="text-transform:uppercase;" type="text" name="nombre" value="" placeholder="Nombre programa" required/>
                                 
                             <label class="lgris">Tipo programa: </label>
-                                <input class="form-control" style="text-transform:uppercase;" type="number" name="numero" min="9999" max="99999999999" value="" placeholder="tipo programa" required/>
-
+                                    <?php 
+                                        include 'funciones.php';
+                                        $miconexion=conectar_bd('root', 'sena_bd');
+                                        $consulta="SELECT * FROM tiposprograma";
+                                        $ejecutar=mysqli_query($miconexion, $consulta) or die(mysqli_error($miconexion));
+                                    ?>
+                                <select name="tipo" class="lgris"> 
+                                    <?php  while ($opciones = $ejecutar -> fetch_object()){ ?>
+                                        <option value="<?php echo $opciones-> tiposp_id ?>"><?php echo $opciones ->tiposp_tipo?></option>
+                                    <?php }?>
+                                 
+                                </select>
                                 <input class="btn btn-primary" type="submit" value="Guardar">
                         </div>
                     
